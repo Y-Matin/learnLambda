@@ -16,7 +16,6 @@ public class StaticMethodReference {
      * 静态方法引用
      * 如果函数式接口的实现是通过调用一个静态方法来完成的，那么就可以使用使用静态方法引用
      * 静态方法引用	类名::staticMethod ==  (args) -> 类名.staticMethod(args)
-     *
      * @param str
      * @return
      */

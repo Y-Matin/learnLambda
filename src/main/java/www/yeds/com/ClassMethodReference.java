@@ -19,6 +19,7 @@ public class ClassMethodReference {
 
     /**
      * 抽象方法的第一个参数类型刚好是实例方法的类型，抽象方法剩余的参数恰好可以当做实例方法的参数
+     * 对象方法引用	类名::instMethod	(int,args) ->类名.instMethod(args)
      * @param args
      */
     public static void main(String[] args) {
