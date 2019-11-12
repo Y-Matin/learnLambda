@@ -1,4 +1,4 @@
-package www.yeds.com;
+package www.yeds.com.Lambda;
 
 
 import java.util.concurrent.Callable;

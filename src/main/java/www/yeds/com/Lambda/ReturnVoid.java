@@ -1,4 +1,4 @@
-package www.yeds.com;
+package www.yeds.com.Lambda;
 
 /**
  * @ProjectName: learnLambda
