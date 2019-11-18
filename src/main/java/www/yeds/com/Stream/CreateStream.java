@@ -27,6 +27,7 @@ public class CreateStream {
     public static void appByArray() {
         String[] strs = {"a","b","c"};
         Stream<String> stream = Stream.of(strs);
+        Stream<String> stream1 = Arrays.stream(strs);
         stream.forEach(System.out::println);
     }
 
