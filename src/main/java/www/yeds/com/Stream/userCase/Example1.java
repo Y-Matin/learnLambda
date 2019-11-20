@@ -1,4 +1,4 @@
-package www.yeds.com.Stream;
+package www.yeds.com.Stream.userCase;
 
 import java.util.Map;
 import java.util.stream.Collectors;

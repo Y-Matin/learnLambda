@@ -1,8 +1,7 @@
-package www.yeds.com.Stream;
+package www.yeds.com.Stream.userCase;
 
 import com.google.common.collect.Lists;
 
-import javax.naming.Name;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
