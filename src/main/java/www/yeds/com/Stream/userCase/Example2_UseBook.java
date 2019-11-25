@@ -137,4 +137,15 @@ public class Example2_UseBook {
         Map<Integer, Optional<Book>> groupMax = books.stream().collect(Collectors.groupingBy(book -> book.getPublishDate().getYear(), Collectors.maxBy(Comparator.comparingDouble(Book::getPrice))));
         System.out.println(groupMax);
     }
+
+    @Test
+    public void test() {
+        /**
+         * 将 价格在50块以上的书按照出版日期降序排序
+         */
+        List<Book> books = init();
+        List<Book> orderByDate = books.stream().filter(book -> book.getPrice() >= 50D).sorted(Comparator.comparing(Book::getPublishDate).reversed()).collect(Collectors.toList());
+        System.out.println(orderByDate);
+
+    }
 }
