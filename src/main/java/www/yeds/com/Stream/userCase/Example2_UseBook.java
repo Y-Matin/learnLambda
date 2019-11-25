@@ -107,4 +107,34 @@ public class Example2_UseBook {
 
 
     }
+
+    @Test
+    public void stst6() {
+        /**
+         * 将书按照发布年份分组
+         */
+
+        List<Book> books = init();
+        Map<Integer, List<Book>> map = books.stream().collect(Collectors.groupingBy(book -> book.getPublishDate().getYear()));
+        map.keySet().forEach(key->{
+            System.out.println(key+":"+map.get(key).size());
+            System.out.println(map.get(key));
+        });
+        /**
+         * 将书按照年份分组，同一年发布的书的数量
+         */
+        Map<Integer, Long> longMap = books.stream().collect(Collectors.groupingBy(book -> book.getPublishDate().getYear(), Collectors.counting()));
+        System.out.println(longMap);
+        /**
+         * 按照年份分组，得到各个组的价格总和
+         */
+        Map<Object, Double> groupSum = books.stream().collect(Collectors.groupingBy(book -> book.getPublishDate().getYear(), Collectors.summingDouble(Book::getPrice)));
+        System.out.println(groupSum);
+
+        /**
+         *按照年份分组，得到各个组中最大值
+         */
+        Map<Integer, Optional<Book>> groupMax = books.stream().collect(Collectors.groupingBy(book -> book.getPublishDate().getYear(), Collectors.maxBy(Comparator.comparingDouble(Book::getPrice))));
+        System.out.println(groupMax);
+    }
 }
